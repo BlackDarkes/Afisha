@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="BD">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Afisha</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__block">
+            <div class="header-information">
+                <a href="" class="header-information__logo"><img src="./logo/logo.svg" alt="logo" class="header-information__logo"></a>
+                
+                <nav class="header-information__navigation">
+                    <ul class="header-list">
+                        <li class="header-list__li">
+                            <a href="../Afishs/header.html" class="header-list__link">Афиша</a>
+                        </li>
+                        <li class="header-list__li">
+                            <a href="" class="header-list__link">Заказ билетов</a>
+                        </li>
+                        <li class="header-list__li">
+                            <a href="../Contact/index.html" class="header-list__link">Контакты</a>
+                        </li>
+                        <li class="header-list__li">
+                            <a href="" class="header-list__link">История дворца</a>
+                        </li>
+                        <li class="header-list__li">
+                            <a href="" class="header-list__link">Галерея</a>
+                        </li>
+                        <li class="header-list__li">
+                            <a href="" class="header-list__link">Планы залов</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-information__mobile burger">
+                    <input type="checkbox" name="burger" id="burger" class="burger__menu">
+                    <label for="burger" class="burger__button"></label>
+                    <ul class="burger-panel">
+                        <li class="burger-panel__link"><a href="../Afishs/header.html" class="burger-panel__link-a">Афиша</a></li>
+                        <li class="burger-panel__link"><a href="" class="burger-panel__link-a">Заказ билетов</a></li>
+                        <li class="burger-panel__link"><a href="../Contact/index.html" class="burger-panel__link-a">Контакты</a></li>
+                        <li class="burger-panel__link"><a href="" class="burger-panel__link-a">История дворца</a></li>
+                        <li class="burger-panel__link"><a href="" class="burger-panel__link-a">Галерея</a></li>
+                        <li class="burger-panel__link"><a href="" class="burger-panel__link-a">Планы залов</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main class="main">
+        <section class="slider-main">
+            <div class="slider-main__block">
+                <div class="slider">
+                    <img src="./image/main/slider/slider__main-image.jpg" id="imagetest" alt="vivaldi"  class="slider__image slider__image--first">
+                    
+                    <form action="" class="slider-form">
+                        <input type="radio" checked name="radio" onchange='check_value(event)' value="ㅤ" class="slider__check slider__check--first" id="slider__check--first">
+                        <label for="slider__check--first" class="slider__button slider__button--first">
+                            <div class="button-block button-block-first">
+                                <img src="./image/main/slider/slider__button/antonio.png" alt="" class="button-block__image">
+                                <p class="button-block__text">Антонио Вивальди. Времена года</p>
+                            </div>
+                        </label>
+
+                        <input type="radio" name="radio" onchange='check_value(event)' value="ㅤㅤ" class="slider__check slider__check--last" id="slider__check--last">
+                        <label for="slider__check--last" class="slider__button slider__button--last">
+                            <div class="button-block button-block-last">
+                                <img src="./image/main/slider/slider__button/operavs.png" alt="" class="button-block__image">
+                                <p class="button-block__text">Опера VS Оперетта</p>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="afisha-main">
+            <div class="afisha-main__block">
+                <div class="afisha">
+                    <h1 class="afisha__title">Афиша</h1>
+                    <a href="../Afishs/header.html" class="afisha-event">
+                        <img src="./image/main/afisha/event.svg" alt="" class="afisha-event__image">
+                        <h3 class="afisha-event__text">Все мероприятия</h3>
+                    </a>
+
+                    <div class="afisha-block">
+                        <span class="afisha-block__data afisha-data">
+                            <h1 class="afisha-data__time">3</h1>
+                            <h2 class="afisha-data__month">июня</h2>
+                        </span>
+                        <img src="./image/main/afisha/button/poster__image-eare.png" alt="" class="afisha-block__image">
+                        <div class="afisha-block__text afisha-text">
+                            <h2 class="afisha-text__title">Антонио Вивальди. Времена года</h2>
+                            <p class="afisha-text__name">Посвящение Фрэнку Синатре.</p>
+                            <div class="afisha-text__image-block imageBlock">
+                                <div class="imageBlock-block">
+                                    <img src="./image/main/afisha/button/icon/music.svg" alt="" class="imageBlock-block__img">
+                                    <p class="imageBlock-block__text">Джаз</p>
+                                </div>
+                                <div class="imageBlock-block">
+                                    <img src="./image/main/afisha/button/icon/time.svg" alt="" class="imageBlock-block__img">
+                                    <p class="imageBlock-block__text">19:00</p>
+                                </div>
+                                <div class="imageBlock-block">
+                                    <img src="./image/main/afisha/button/icon/age.svg" alt="" class="imageBlock-block__img">
+                                    <p class="imageBlock-block__text">6+</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="" class="afisha-form">
+                            <a href="../poster/index.html" class="afisha-form__button">Заказать билет</a>
+                        </form>
+                    </div>
+
+                    <div class="afisha-block afisha-data">
+                        <span class="afisha-data__data">
+                            <h1 class="afisha-data__time">30</h1>
+                            <h2 class="afisha-data__month">июня</h2>
+                        </span>
+                        <img src="./image/main/afisha/button/poster__image-vs.png" alt="" class="afisha-block__image">
+                        <div class="afisha-block__text afisha-text">
+                            <h2 class="afisha-text__title">Опера VS Оперетта</h2>
+                            <p class="afisha-text__name">Санкт-Петербургский камерный оркестр Olympic Orchestra</p>
+                            <div class="afisha-text__image-block imageBlock">
+                                <div class="imageBlock-block">
+                                    <img src="./image/main/afisha/button/icon/music.svg" alt="" class="imageBlock-block__img">
+                                    <p class="imageBlock-block__text">Классика</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="" class="afisha-form">
+                            <a class="afisha-form__button">Заказать билет</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="announc-main">
+            <div class="announc-main__block">
+                <div class="announc">
+                    <div class="announc-news">
+                        <h1 class="announc-news__title">Новости</h1>
+                        <div class="announc-news__new new">
+                            <div class="new-block">
+                                <img src="./image/main/news/news__image.png" alt="" class="new-block__image">
+                                <h3 class="new-block__title">Переносы / Отмена мероприятий</h3>
+                                <p class="new-block__text">11.04.2023 г. в 19.00 час. — концерт «Опера vs. Оперетта» - ПЕРЕНОС на 05.06.2023 г. в 19.00 час.</p>
+                            </div>
+                            <div class="new-block">
+                                <img src="./image/main/news/news__image-two.png" alt="" class="new-block__image">
+                                <h3 class="new-block__title">Переносы / Отмена мероприятий</h3>
+                                <p class="new-block__text">11.04.2023 г. в 19.00 час. — концерт «Опера vs. Оперетта» - ПЕРЕНОС на 05.06.2023 г. в 19.00 час.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announc-calendar">
+                        <div class="announc-calendar__block calendar">
+                            <div class="calendar-imgblock">
+                                <img src="./image/main/news/celender/calendar__image.png" alt="image" class="calendar-imgblock__image" />
+                            </div>
+                            <div class="calendar-celend">
+                                <div class="calendar-celend__month month">
+                                    <h2 class="month__title">Июль</h2>
+                                    <form action="" class="month-form">
+                                        <button class="month-form__button"><</button>
+                                        <button class="month-form__button">></button>
+                                    </form>
+                                </div>
+                                <div class="calendar-celend__date date">
+                                    <div class="date__date">1</div>
+                                    <div class="date__date date__date--grin">2</div>
+                                    <div class="date__date">3</div>
+                                    <div class="date__date">4</div>
+                                    <div class="date__date date__date--grin">5</div>
+                                    <div class="date__date">6</div>
+                                    <div class="date__date date__date--grin">7</div>
+                                    <div class="date__date">1</div>
+                                    <div class="date__date date__date--grin">2</div>
+                                    <div class="date__date">3</div>
+                                    <div class="date__date">4</div>
+                                    <div class="date__date date__date--grin">5</div>
+                                    <div class="date__date">6</div>
+                                    <div class="date__date date__date--grin">7</div>
+                                    <div class="date__date">1</div>
+                                    <div class="date__date date__date--grin">2</div>
+                                    <div class="date__date">3</div>
+                                    <div class="date__date">4</div>
+                                    <div class="date__date date__date--grin">5</div>
+                                    <div class="date__date">6</div>
+                                    <div class="date__date date__date--grin">7</div>
+                                    <div class="date__date">1</div>
+                                    <div class="date__date date__date--grin">2</div>
+                                    <div class="date__date">3</div>
+                                    <div class="date__date">4</div>
+                                    <div class="date__date date__date--grin">5</div>
+                                    <div class="date__date">6</div>
+                                    <div class="date__date date__date--grin">7</div>
+                                    <div class="date__date">1</div>
+                                    <div class="date__date date__date--grin">2</div>
+                                    <div class="date__date">3</div>
+                                    <div class="date__date">4</div>
+                                    <div class="date__date date__date--grin">5</div>
+                                    <div class="date__date">6</div>
+                                    <div class="date__date date__date--grin">7</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="news-short">
+            <div class="news-short__block">
+                <div class="news">
+                    <h1 class="news__title">Краткие анонсы</h1>
+                    <a href="" class="news-event">
+                        <img src="./image/main/afisha/event.svg" alt="" class="news-event__image">
+                        <h3 class="news-event__text">Все мероприятия</h3>
+                    </a>
+                    <ul class="news-list">
+                        <li class="news-list__date">
+                            <h4 class="news-list__date-date">3</h4>
+                            <p class="news-list__date-text">июня</p>
+                        </li>
+                        <li class="news-list__date">
+                            <h4 class="news-list__date-date">3</h4>
+                            <p class="news-list__date-text">июня</p>
+                        </li>
+                        <li class="news-list__date">
+                            <h4 class="news-list__date-date">3</h4>
+                            <p class="news-list__date-text">июня</p>
+                        </li>
+                        <li class="news-list__date">
+                            <h4 class="news-list__date-date">3</h4>
+                            <p class="news-list__date-text">июня</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer__block">
+            <div class="footer-information">
+                <div class="footer-information__logo information-logo">
+                    <img src="./logo/logo.svg" alt="" class="information-logo__logo">
+                </div>
+                    
+                <div class="footer-information__event information-event">
+                    <h3 class="information-event__title">Мероприятия</h3>
+                    <ul class="information-event__list event-list">
+                        <li class="event-list__link"><a href="">Экскурсии</a></li>
+                        <li class="event-list__link"><a href="">Концерты</a></li>
+                        <li class="event-list__link"><a href="../Afishs/header.html">Афиша</a></li>  
+                    </ul>
+                </div>
+
+                <div class="foter-information__contact information-contact">
+                    <h3 class="information-contact__title">Контакты</h3>
+                    <ul class="information-contact__block contact-list">
+                        <address class="contact-list__list">г. Санкт-Петербург, Невский пр., д. 1</address>
+                        <a href="mailto:text@mail.ru" class="contact-list__list">text@mail.ru</a>
+                        <a href="tel:+78121234567" class="contact-list__link">(812) 123-45-67</a>
+                    </ul>
+                </div>
+                <div class="footer-site">
+                    <p class="footer-site__text">Сайт концертно-экскурсионных программ</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
+</html>

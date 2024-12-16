@@ -1,0 +1,83 @@
+.slider-main{
+    @include main(154);
+
+    &__block{
+        @include block-size;
+
+        .slider{
+            @function grid-columns ($column: 1){
+                @return #{$column * 18};
+            }
+
+            display: grid;
+            grid-template-columns: repeat(grid-columns(1), 1fr);
+            grid-template-rows: repeat(grid-columns(1) 1fr);
+
+            &__image{
+                grid-column: 1/14;
+                grid-row: 1/18;
+
+                @media (max-width: 1300px) {
+                    grid-row: 1;
+                    margin-inline: auto;
+                }
+            }
+
+            .slider-form{
+                grid-column: 13/19;
+                grid-row: 1;
+                margin-left: 24px;
+                display: grid;
+                row-gap: 24px;
+                
+
+                .slider__check{
+                    position: absolute;
+                    visibility: hidden;
+
+                    &:checked + .slider__button{
+                        background-color: rgb(25 25 25 / 0.5);
+                    }
+                }
+
+                @media (max-width: 1300px) {
+                    grid-column: 1;
+                    grid-row: 2;
+                    margin-inline: auto;
+                    width: 60%;
+                }
+
+                @media (max-width: 700px) {
+                    width: auto;
+                }
+            }
+                .slider__button{
+                    border-radius: 8px;
+                    transition: 0.5s;
+                    cursor: pointer;
+
+                    .button-block{
+                        display: flex;
+                        align-items: center;
+                        column-gap: 24px;
+                        padding: 12px 0 16px 12px;
+                        background-color: rgb(25 25 25 / 0.05);
+
+                        @media (max-width: 1300px) {
+                            padding: 16px;
+                        }
+                    }
+                }
+
+            @media (max-width: 1300px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(1, 1fr);
+                row-gap: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        margin-bottom: 90px;
+    }
+}

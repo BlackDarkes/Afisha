@@ -1,0 +1,33 @@
+body{
+    font-size: 16px;
+    color: var(--dark-color);
+    font-family: var(--Fira-Sans);
+}
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--Garamond);
+}
+
+img{
+    user-select: none;
+}
+
+.header-list__li{
+    position: relative;
+
+    &:not(:first-child)::before{
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -24px;
+        width: 5px;
+        height: 5px;
+        background-color: var(--light-color);
+        rotate: 45deg;
+    }
+}

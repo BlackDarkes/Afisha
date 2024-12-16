@@ -1,0 +1,121 @@
+.news-short{
+    @include main(150);
+
+    &__block{
+        @include block-size;
+
+        .news{
+            @function grid-columns ($column: 1){
+                @return #{$column * 18}
+            }
+
+            display: grid;
+            grid-template-columns: repeat(grid-columns(1), 1fr);
+
+            &__title{
+                grid-column: 1/6;
+                padding-bottom: 100px;
+                @include font-h1;
+
+                @media (max-width: 1300px) {
+                    grid-column: 1;
+                    grid-row: 1;
+                    font-size: var(--h1-mob);
+                    padding-bottom: 50px;
+                }
+            }
+
+            &-event{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                column-gap: 32px;
+                grid-column: 15/19;
+                margin-bottom: 100px;
+
+                &__text{
+                    font-weight: var(--extra-bold);
+                    font-size: var(--h3-font);
+
+                    @media (max-width: 1300px) {
+                        font-size: var(--h3-mob);
+
+                    }
+                }
+
+                @media (max-width: 1300px) {
+                    grid-column: 2;
+                    grid-row: 1;
+                    margin-bottom: 50px;
+                }
+            }
+
+            &-list{
+                grid-column: -1/1;
+                display: flex;
+                column-gap: 230px;
+
+                &__date{
+                    display: grid;
+                    padding: 12px 23px;
+                    background-color: var(--grin-color);
+                    border-radius: 12px;
+                    color: var(--light-color);
+                    position: relative;
+
+                    &::before{
+                        position: absolute;
+                        content: "«ВЕК имени СИНАТРЫ»";
+                        bottom: 45px; left: 130px;
+                        color: var(--dark-color);
+                        width: 180px;
+                        font-size: var(--smol-size);
+                        font-weight: var(--extra-bold);
+                    }
+
+                    &-date{
+                        font-weight: var(--extra-bold);
+                        font-size: var(--h2-font);
+                        justify-self: center;
+                    }
+
+                    &-text{
+                        font-size: 18px;
+                        font-weight: var(--bold);
+                        justify-self: center;
+                    }
+
+                    @media (max-width: 1300px) {
+                        height: 99px;
+                        width: 91px;
+                    }
+                }
+
+                @media (max-width: 1300px) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    row-gap: 32px;
+                }
+
+                @media (max-width: 830px) {
+                    grid-template-columns: 1fr;
+                    justify-self: center;
+                    grid-column: 1;
+                }
+
+                @media (max-width: 400px) {
+                    justify-self: start;
+                }
+            }
+
+            @media (max-width: 1300px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        margin-bottom: 90px;
+    }
+}

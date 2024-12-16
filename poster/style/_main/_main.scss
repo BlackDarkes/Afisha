@@ -1,0 +1,154 @@
+.poster-main{
+    height: auto;
+    width: auto;
+    margin-bottom: 136px;
+
+    &__block{
+        width: min(100% - 24px, 81rem);
+        margin-inline: auto;
+
+        .poster{
+            @function grid-columns($column: 1){
+                @return #{$column * 18}
+            }
+
+            display: grid;
+            grid-template-columns: repeat(grid-columns(1), 1fr);
+            row-gap: 100px;
+
+            &__title{
+                grid-column: 7/14;
+                grid-row: 1;
+                
+                @media (max-width: 1300px) {
+                    grid-column: 1;
+                    font-size: 24px;
+                }
+            }
+
+            .poster-info{
+                grid-column: 1/-1;
+                grid-row: 2;
+                display: flex;
+                column-gap: 134px;
+
+                &__image{
+                    height: 500px;
+                    width: min(100% - 20px, 526px);
+                    margin-bottom: 40px;
+
+                    @media (max-width: 1300px) {
+                        margin-inline: auto;
+                    }
+                }
+
+                .info{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 40px;
+
+                    &-title{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 24px;
+
+                        &__title{
+                            font-size: 24px;
+                        }
+
+                        &__text{
+                            line-height: 44px;
+                            @media (max-width: 450px) {
+                                line-height: 25px;
+                            }
+                        }
+                    }
+
+                    &-text{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 24px;
+                    }
+
+                    &-program{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 24px;
+
+                        &__title{
+                            font-size: 24px;
+                        }
+
+                        &__text{
+                            line-height: 44px;
+
+                            .title{
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    &-prise{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 24px;
+
+                        &__title{
+                            font-size: 24px;
+                        }
+                    }
+
+                    &-form{
+
+                        &__button{
+                            padding: 15px 30px 14px 30px;
+                            border-radius: 50px;
+                            background-color: #05B093;
+                            color: #ffffff;
+                            border: 0;
+                            cursor: pointer;
+                            transition: 0.7s;
+
+                            @media (hover: hover){
+                                &:hover{
+                                    background-color: #017562;
+                                    color: #fafafa;
+                                }
+                            }
+
+                            @media (hover: none){
+                                &:active{
+                                    background-color: #017562;
+                                    color: #fafafa;
+                                }
+                            }
+                        }
+                    }
+
+                    &-img{
+                        display: flex;
+                        gap: 24px;
+
+                        @media (max-width: 700px) {
+                            flex-direction: column;
+                        }
+                    }
+
+                    @media (max-width: 1300px) {
+                        align-items: center;
+                        row-gap: 40px;
+                    }
+                }
+
+                @media (max-width: 1300px) {
+                    flex-direction: column;
+                }
+            }
+
+            @media (max-width: 1300px) {
+                grid-template-columns: 1fr;
+                row-gap: 40px;
+            }
+        }
+    }
+}

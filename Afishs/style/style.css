@@ -1,0 +1,15 @@
+.afisha__titles {
+  grid-column: 10;
+  font-size: var(--h1-font);
+  font-weight: var(--extra-bold);
+}
+@media (max-width: 1300px) {
+  .afisha__titles {
+    grid-column: 1;
+  }
+}
+@media (max-width: 710px) {
+  .afisha__titles {
+    font-size: var(--h1-mob);
+  }
+}/*# sourceMappingURL=style.css.map */

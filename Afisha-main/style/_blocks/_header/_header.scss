@@ -1,0 +1,145 @@
+.header{
+    @include header;
+
+    &__block{
+        @include block-size;
+
+        .header-information{
+            @function grid-columns ($column: 1){
+                @return #{$column * 18};
+            }
+
+            display: grid;
+            grid-template-columns: repeat(grid-columns(1), 1fr);
+
+            padding-block: 32px;
+            user-select: none;
+
+            &__logo{
+                grid-column: 1/6;
+                align-self: center;
+
+                @media (max-width: 1300px) {
+                    grid-column: 1;
+                }
+            }
+
+            &__navigation{
+                grid-column: 8/19;
+
+                .header-list{
+                    display: flex;
+                    justify-content: flex-end;
+                    column-gap: 48px;
+                    color: var(--light-color);
+
+                    .header-list__li{
+                        width: auto;
+
+                        &::after{
+                            @include underline;
+                        }
+
+                        &:hover::after{
+                            @include underline-hover;
+                        }
+                    }
+                }
+
+                @media (max-width: 1300px) {
+                    display: none;
+                }
+            }
+
+            .burger{
+                display: none;
+                justify-self: end;
+
+                &__menu{
+                    position: absolute;
+                    top: 0; left: 20px;
+                    visibility: hidden;
+
+                    &:checked + .burger__button::after{
+                        transform: rotate(45deg);
+                        bottom: 14px;
+                        box-shadow: 0 0 0 rgb(0 0 0 / 0);
+                        transition: transform .3s .15s, bottom .3s .15s, box-shadow .1s;
+                    }
+
+                    &:checked + .burger__button::before{
+                        transform: rotate(-45deg);
+                        top: 14px;
+                        box-shadow: 0 0 0 rgb(0 0 0 / 0);
+                        transition: transform .3s .15s, top .3s .15s, box-shadow .1s ;
+                    }
+
+                    &:checked ~ .burger-panel{
+                        transform: translateX(0);
+                    }
+                }
+
+                &__button{
+                    display: block;
+                    position: fixed;
+                    top: 24px; right: 24px;
+                    width: 30px;
+                    height: 28px;
+                    z-index: var(--z-300);
+
+                    &::before,
+                    &::after{
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: var(--grin-color);
+                    }
+
+                    &::before{
+                        top: 0;
+                        box-shadow: 0 14px 0 var(--grin-color);
+                        transition: top .3s .15s, box-shadow .3s;
+                    }
+
+                    &::after{
+                        bottom: 0;
+                        box-shadow: 0 -13px 0 var(--grin-color);
+                        transition: bottom .3s .15s, box-shadow .3s;
+                    }
+                }
+
+                &-panel{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 32px;
+                    position: fixed;
+                    top: 0; right: 0;
+                    z-index: var(--z-200);
+                    width: min(100% - 60px, 600px);
+                    height: 100dvh;
+                    background-color: var(--light-color);
+                    padding: 24px 0 0 24px;
+                    transform: translateX(100%);
+                    transition: 0.7s;
+
+                    &__link-a{
+                        font-size: var(--h2-mob);
+                        font-weight: var(--extra-bold);
+                    }
+                }
+
+                @media (max-width: 1300px) {
+                    display: block;
+                    grid-column: 2;
+                }
+            }
+
+            @media (max-width: 1300px) {
+                grid-template-columns: 1.5fr 0.5fr;
+            }
+        }
+    }
+}
